@@ -36,4 +36,12 @@ def available_providers() -> List[ProviderSpec]:
                 config_class="llama_stack.providers.remote.datasetio.huggingface.HuggingfaceDatasetIOConfig",
             ),
         ),
+        remote_provider_spec(
+            api=Api.datasetio,
+            adapter=AdapterSpec(
+                adapter_type="s3",
+                module="llama_stack.providers.remote.datasetio.s3",
+                config_class="llama_stack.providers.remote.datasetio.s3.S3DatasetIOConfig",
+            ),
+        ),
     ]
